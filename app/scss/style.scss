@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+#reactWrap {
+    font-size: 12px;
+    padding: 65px 0 0 230px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background-color: #0f2333;
+    z-index: 20;
+}
+.header h1 {
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.gnb {
+    position: fixed;
+    left: 0;
+    top: 65px;
+    bottom: 0;
+    width: 230px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #0f2333;
+    color: #fff;
+    z-index: 10;
+}
+.nav {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    line-height: 2;
+
+    &__depth1 {
+        > li > span,
+        > li > a {
+            padding-left: 10px;
+            font-size: 24px;
+            background-color: rgba(255,255,255,.08);
+        }
+    }
+    &__depth2 {
+        margin-bottom: 10px;
+        > li > span,
+        > li > a {
+            padding-left: 20px;
+            font-size: 18px;
+        }
+    }
+    &__depth3 {
+        > li {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+        > li > span,
+        > li > a {
+            padding-left: 25px;
+            font-size: 13px;
+        }
+    }
+    a:hover {
+        background-color: rgba(255,255,255,.15);
+    }
+    a, span {display: block;}
+}
+a { text-decoration: none; color: inherit; }
+
+#contentWrap {
+    padding: 20px;
+}
